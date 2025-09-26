@@ -1,0 +1,253 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex:    <http://asiainfo.com/example-owl#> .
+
+##################################
+# 基础抽象类与通用语义（禁止变动）
+##################################
+
+ex:Entity a owl:Class ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:label "实体"@zh .
+
+ex:Object a owl:Class ;
+  rdfs:subClassOf ex:Entity ;
+  rdfs:label "本体对象"@zh .
+
+ex:Action a owl:Class ;
+  rdfs:subClassOf prov:Activity ;
+  rdfs:label "行动"@zh .
+
+ex:Function a owl:Class ;
+  rdfs:subClassOf prov:Activity ;
+  rdfs:label "决策/逻辑函数"@zh .
+
+# 导入识别用注解属性
+ex:isPrimaryKey a owl:AnnotationProperty ;
+  rdfs:label "是否主键"@zh .
+
+ex:isTitle a owl:AnnotationProperty ;
+  rdfs:label "是否标题"@zh .
+
+ex:domainAttribute a owl:AnnotationProperty ;
+  rdfs:label "域属性"@zh ;
+  rdfs:comment "指定对象属性的域端使用哪个数据属性建立关联"@zh .
+
+ex:rangeAttribute a owl:AnnotationProperty ;
+  rdfs:label "值域属性"@zh ;
+  rdfs:comment "指定对象属性的值域端使用哪个数据属性建立关联"@zh .
+
+# 绑定关系与自定义关系基类
+ex:bindAction a owl:ObjectProperty ;
+  rdfs:label "本体对象关联行动"@zh ;
+  rdfs:domain ex:Object ;
+  rdfs:range ex:Action .
+
+ex:bindFunction a owl:ObjectProperty ;
+  rdfs:label "本体对象关联函数"@zh ;
+  rdfs:domain ex:Object ;
+  rdfs:range ex:Function .
+
+ex:custom_relation a owl:ObjectProperty ;
+  rdfs:label "自定义对象与对象之间的关系"@zh .
+
+
+##################################
+# 对象定义（含少量变更 + 新增 Store）
+##################################
+
+ex:Product a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "产品（更新）"@zh ;
+  rdfs:comment "平台上销售的商品（描述已更新，用于测试更新导入）"@zh .
+
+ex:Category a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "品类（更新）"@zh ;
+  rdfs:comment "商品所属分类（描述已更新）"@zh .
+
+ex:Inventory a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "库存"@zh ;
+  rdfs:comment "库存批次记录"@zh .
+
+ex:Warehouse a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "仓库"@zh ;
+  rdfs:comment "仓储位置"@zh .
+
+ex:Shipment a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "发货"@zh ;
+  rdfs:comment "一次发货批次"@zh .
+
+ex:Order a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "订单"@zh ;
+  rdfs:comment "客户订单（更新测试用）"@zh .
+
+# 新增的对象
+ex:Store a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "门店"@zh ;
+  rdfs:comment "线下或线上销售门店（新增）"@zh .
+
+
+##################################
+# 数据属性定义（含变更 + 新增）
+##################################
+
+# Product 属性（变更：ProductName 的 isTitle 改为 false；新增 ProductSKU）
+ex:ProductID a owl:DatatypeProperty ;
+  rdfs:domain ex:Product ;
+  rdfs:range xsd:string ;
+  rdfs:label "Product唯一标识"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+ex:ProductName a owl:DatatypeProperty ;
+  rdfs:domain ex:Product ;
+  rdfs:range xsd:string ;
+  rdfs:label "Product名称（更新）"@zh ;
+  ex:isPrimaryKey false ;
+  ex:isTitle false .
+
+ex:ProductSKU a owl:DatatypeProperty ;
+  rdfs:domain ex:Product ;
+  rdfs:range xsd:string ;
+  rdfs:label "SKU（新增）"@zh ;
+  ex:isPrimaryKey false ;
+  ex:isTitle true .
+
+# Category 属性（标签文字有微调）
+ex:CategoryID a owl:DatatypeProperty ;
+  rdfs:domain ex:Category ;
+  rdfs:range xsd:string ;
+  rdfs:label "Category唯一标识"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+ex:CategoryName a owl:DatatypeProperty ;
+  rdfs:domain ex:Category ;
+  rdfs:range xsd:string ;
+  rdfs:label "Category名称（更新）"@zh ;
+  ex:isPrimaryKey false ;
+  ex:isTitle true .
+
+# Inventory 属性
+ex:InventoryID a owl:DatatypeProperty ;
+  rdfs:domain ex:Inventory ;
+  rdfs:range xsd:string ;
+  rdfs:label "Inventory唯一标识"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+# Warehouse 属性
+ex:WarehouseID a owl:DatatypeProperty ;
+  rdfs:domain ex:Warehouse ;
+  rdfs:range xsd:string ;
+  rdfs:label "Warehouse唯一标识"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+# Shipment 属性
+ex:ShipmentID a owl:DatatypeProperty ;
+  rdfs:domain ex:Shipment ;
+  rdfs:range xsd:string ;
+  rdfs:label "Shipment唯一标识"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+# Order 属性
+ex:OrderID a owl:DatatypeProperty ;
+  rdfs:domain ex:Order ;
+  rdfs:range xsd:string ;
+  rdfs:label "Order唯一标识"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+# Store 属性（新增）
+ex:StoreID a owl:DatatypeProperty ;
+  rdfs:domain ex:Store ;
+  rdfs:range xsd:string ;
+  rdfs:label "Store唯一标识（新增）"@zh ;
+  ex:isPrimaryKey true ;
+  ex:isTitle false .
+
+ex:StoreName a owl:DatatypeProperty ;
+  rdfs:domain ex:Store ;
+  rdfs:range xsd:string ;
+  rdfs:label "门店名称（新增）"@zh ;
+  ex:isPrimaryKey false ;
+  ex:isTitle true .
+
+# 共享属性（unionOf 示例）：ExternalCode 同时属于 Product 与 Category
+ex:ExternalCode a owl:DatatypeProperty ;
+  rdfs:domain [ owl:unionOf ( ex:Product ex:Category ) ] ;
+  rdfs:range xsd:string ;
+  rdfs:label "外部编码（共享/unionOf）"@zh ;
+  ex:isPrimaryKey false ;
+  ex:isTitle false .
+
+
+##################################
+# 关系定义（只保留一个方向，且含一条全新关系）
+##################################
+
+# 只保留 Product -> Category（去掉 Category -> Product）
+ex:inCategory a owl:ObjectProperty ;
+    rdfs:subPropertyOf ex:custom_relation ;
+    rdfs:domain ex:Product ;
+    rdfs:range ex:Category ;
+    rdfs:label "inCategory（更新：仅保留单向）"@zh ;
+    ex:domainAttribute ex:ProductID ;
+    ex:rangeAttribute ex:CategoryID .
+
+# 只保留 Inventory -> Product（去掉 Product -> Inventory）
+ex:ofProduct a owl:ObjectProperty ;
+    rdfs:subPropertyOf ex:custom_relation ;
+    rdfs:domain ex:Inventory ;
+    rdfs:range ex:Product ;
+    rdfs:label "ofProduct（更新：仅保留单向）"@zh ;
+    ex:domainAttribute ex:InventoryID ;
+    ex:rangeAttribute ex:ProductID .
+
+# 只保留 Warehouse -> Inventory（去掉 Inventory -> Warehouse）
+ex:holdsInventory a owl:ObjectProperty ;
+    rdfs:subPropertyOf ex:custom_relation ;
+    rdfs:domain ex:Warehouse ;
+    rdfs:range ex:Inventory ;
+    rdfs:label "holdsInventory（更新：仅保留单向）"@zh ;
+    ex:domainAttribute ex:WarehouseID ;
+    ex:rangeAttribute ex:InventoryID .
+
+# 只保留 Shipment -> Warehouse（去掉 Warehouse -> Shipment）
+ex:shipsFrom a owl:ObjectProperty ;
+    rdfs:subPropertyOf ex:custom_relation ;
+    rdfs:domain ex:Shipment ;
+    rdfs:range ex:Warehouse ;
+    rdfs:label "shipsFrom（更新：仅保留单向）"@zh ;
+    ex:domainAttribute ex:ShipmentID ;
+    ex:rangeAttribute ex:WarehouseID .
+
+# 只保留 Order -> Customer（去掉 Customer -> Order）
+ex:orderedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf ex:custom_relation ;
+    rdfs:domain ex:Order ;
+    rdfs:range ex:Customer ;
+    rdfs:label "orderedBy（更新：仅保留单向）"@zh ;
+    ex:domainAttribute ex:OrderID ;
+    ex:rangeAttribute ex:CustomerID .
+
+# 新增关系：Product -> Store
+ex:soldInStore a owl:ObjectProperty ;
+    rdfs:subPropertyOf ex:custom_relation ;
+    rdfs:domain ex:Product ;
+    rdfs:range ex:Store ;
+    rdfs:label "soldInStore（新增）"@zh ;
+    ex:domainAttribute ex:ProductID ;
+    ex:rangeAttribute ex:StoreID .
