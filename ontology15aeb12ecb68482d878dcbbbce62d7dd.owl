@@ -913,20 +913,6 @@ ex:metricDerivesTag a owl:ObjectProperty ;
   rdfs:comment "指标或模型输出派生的离散标签集合"@zh ;
   owl:inverseOf ex:tagDerivedFromMetric .
 
-ex:产品互斥 a owl:ObjectProperty , owl:SymmetricProperty ;
-  rdfs:subPropertyOf ex:custom_relation ;
-  rdfs:domain ex:Product ;
-  rdfs:range ex:Product ;
-  rdfs:label "产品互斥"@zh ;
-  rdfs:comment "两个产品/套餐不可同时办理或生效 (业务互斥规则)"@zh .
-
-ex:产品可叠加 a owl:ObjectProperty , owl:SymmetricProperty ;
-  rdfs:subPropertyOf ex:custom_relation ;
-  rdfs:domain ex:Product ;
-  rdfs:range ex:Product ;
-  rdfs:label "产品可叠加"@zh ;
-  rdfs:comment "两个产品可同时办理/叠加 (权益或附加包)"@zh .
-
 ex:tagMapsProduct a owl:ObjectProperty ;
   rdfs:subPropertyOf ex:custom_relation ;
   rdfs:domain ex:tag ;
