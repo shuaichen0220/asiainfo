@@ -1,0 +1,1080 @@
+{
+    "status": "success",
+    "message": null,
+    "data": {
+        "object": {
+            "create": [
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "metric",
+                    "objectTypeLabel": "指标",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [
+                        {
+                            "fieldName": null,
+                            "attributeName": "_30日总收入",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_7日转化率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_7日总收入",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_30日转化率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "日期",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "指标粒度",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "套餐ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_30日转化率_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_30日总收入_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_7日转化率_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_7日总收入_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "承诺等级",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "增长率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "更新时间",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "用户ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "用户ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "近三期ARPU均值",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "ARPU折扣率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "上期ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "上上期ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "会员ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "换号概率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "会员DOU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "离网预警概率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "营销触达率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "会员MOU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "套餐升级概率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "会员产品费",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        }
+                    ],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                },
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "tag",
+                    "objectTypeLabel": "标签",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [
+                        {
+                            "fieldName": null,
+                            "attributeName": "_5G主卡",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "日期",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "会员等级",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "更新时间",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "用户ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "_5G主卡_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "流量超限",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "老年用户",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "学生用户",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "高价值",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "低余额",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "合并用户",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "套餐升级意向",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "近期出行",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "无限流量",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "语音超限",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        }
+                    ],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                },
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "METRIC_INST",
+                    "objectTypeLabel": "业务标识",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [
+                        {
+                            "fieldName": null,
+                            "attributeName": "指标描述",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "指标实例",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "指标名称",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "指标周期",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        }
+                    ],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                },
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "test_009",
+                    "objectTypeLabel": "测试",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [
+                        {
+                            "fieldName": null,
+                            "attributeName": "客户姓名",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        }
+                    ],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                },
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "user",
+                    "objectTypeLabel": "用户",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [
+                        {
+                            "fieldName": null,
+                            "attributeName": "ARPU会员",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "产品费会员",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "MOU会员",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "学生卡标识原始",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "DOU会员",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "客户ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否5G主套餐",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "账户余额",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "年龄",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "最近3月ARPU均值",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "ARPU折扣率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "上期ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "上两期ARPU",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "ARPU会员_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "换机概率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "DOU会员_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "家庭是否融合产品",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "家庭最大等级",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "家庭规模",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否融合套餐",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否实名",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "学生卡标识原始_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否无限流量",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "入网月",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "离网预警概率",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "主套餐ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "MOU会员_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "产品费会员_2",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "性别",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "星级",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        }
+                    ],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                },
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "Behavior",
+                    "objectTypeLabel": "行为",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [
+                        {
+                            "fieldName": null,
+                            "attributeName": "渠道ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "联系时间",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否主动",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否订单",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否接收",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否策略",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "是否成功",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "推荐原因",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "策略ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "成功时间",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "日期",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "计划ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "序列号",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 0,
+                            "isTitle": 0
+                        },
+                        {
+                            "fieldName": null,
+                            "attributeName": "用户ID",
+                            "sharedAttributeId": null,
+                            "isPrimaryKey": 1,
+                            "isTitle": 0
+                        }
+                    ],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                }
+            ],
+            "update": [
+                {
+                    "ontologyId": "100",
+                    "objectTypeName": "Product",
+                    "objectTypeLabel": "产品",
+                    "objectTypeDesc": "",
+                    "dsId": null,
+                    "dsSchema": null,
+                    "tableName": null,
+                    "groupIds": [],
+                    "attributes": [],
+                    "lastUpdate": "2025-10-14 17:39:07"
+                }
+            ]
+        },
+        "tag": {
+            "create": [],
+            "exist": [
+                {
+                    "tagId": "bf083c9f5512405586dcfe0e3587dbb3",
+                    "tagName": "behaviorProduct",
+                    "tagLabel": "涉及产品"
+                },
+                {
+                    "tagId": "52038bf864f64ddfacaec2ef179a2315",
+                    "tagName": "productBehavior",
+                    "tagLabel": "被行为涉及"
+                },
+                {
+                    "tagId": "2d9c1e2d48844dd68d2fc655d28ed91f",
+                    "tagName": "metricOfProduct",
+                    "tagLabel": "指标所属产品"
+                },
+                {
+                    "tagId": "8726a5d9843344b9be311ba1ef6fd000",
+                    "tagName": "productMetric",
+                    "tagLabel": "产品指标"
+                },
+                {
+                    "tagId": "aebecbf508074fa48278971f8510c6ae",
+                    "tagName": "hasUser",
+                    "tagLabel": "上传人"
+                },
+                {
+                    "tagId": "7f9afe4c10fe4b7690e1c757a924fe25",
+                    "tagName": "ownsProduct",
+                    "tagLabel": "拥有"
+                },
+                {
+                    "tagId": "f384fbaa451842e5aaf2668fa3dc19ca",
+                    "tagName": "tagDerivedFromMetric",
+                    "tagLabel": "标签来源指标"
+                },
+                {
+                    "tagId": "c1fd2efab7c24bf4a41b318f28e9ed18",
+                    "tagName": "metricDerivesTag",
+                    "tagLabel": "指标派生标签"
+                },
+                {
+                    "tagId": "649afe22cf06441b9fe70e24bbf8a4e4",
+                    "tagName": "tagMapsProduct",
+                    "tagLabel": "标签映射产品"
+                },
+                {
+                    "tagId": "e4de6da774734cfb9d4c3c0f20932247",
+                    "tagName": "productMappedByTag",
+                    "tagLabel": "产品派生标签"
+                },
+                {
+                    "tagId": "fe211a94bae44226827115ed22f4e5c8",
+                    "tagName": "hasBehavior",
+                    "tagLabel": "拥有行为"
+                },
+                {
+                    "tagId": "5805c385253547388b307e7c5d855f32",
+                    "tagName": "behaviorUser",
+                    "tagLabel": "行为用户"
+                },
+                {
+                    "tagId": "a62cdb91d30c4dd9b82a36c8410e5949",
+                    "tagName": "hasMetric",
+                    "tagLabel": "拥有指标"
+                },
+                {
+                    "tagId": "89c775327b2e43e890a57104143670d7",
+                    "tagName": "metricOfUser",
+                    "tagLabel": "指标所属用户"
+                },
+                {
+                    "tagId": "e729f8943c6546f8b6b825e55bd6d43e",
+                    "tagName": "hasTag",
+                    "tagLabel": "拥有标签"
+                },
+                {
+                    "tagId": "73fc54d13d324e0399df723be1b9dd29",
+                    "tagName": "tagOfUser",
+                    "tagLabel": "标签所属用户"
+                }
+            ]
+        },
+        "link": {
+            "create": [
+                {
+                    "sourcename": "Behavior",
+                    "sourcelabel": "行为",
+                    "sourceObjectTypeId": "0913dbe502694a9a841c742bd212559a",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "f5b3a75b08cb4111acccd9d501995929",
+                    "targetname": "Product",
+                    "targetlabel": "产品",
+                    "targetObjectTypeId": "2003",
+                    "targetAttrName": null,
+                    "targetAttrId": "6ce40d50d6f842789db5c65a04e755fd",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "bf083c9f5512405586dcfe0e3587dbb3"
+                    ],
+                    "target_tag": [
+                        "52038bf864f64ddfacaec2ef179a2315"
+                    ]
+                },
+                {
+                    "sourcename": "metric",
+                    "sourcelabel": "指标",
+                    "sourceObjectTypeId": "a78cc2ce511a4d8e94e98cd1f7b744ce",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "9e4d3b2b0d784bc9b94296f0875efb28",
+                    "targetname": "Product",
+                    "targetlabel": "产品",
+                    "targetObjectTypeId": "2003",
+                    "targetAttrName": null,
+                    "targetAttrId": "6ce40d50d6f842789db5c65a04e755fd",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "2d9c1e2d48844dd68d2fc655d28ed91f"
+                    ],
+                    "target_tag": [
+                        "8726a5d9843344b9be311ba1ef6fd000"
+                    ]
+                },
+                {
+                    "sourcename": "Product",
+                    "sourcelabel": "产品",
+                    "sourceObjectTypeId": "2003",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "6ce40d50d6f842789db5c65a04e755fd",
+                    "targetname": "user",
+                    "targetlabel": "用户",
+                    "targetObjectTypeId": "dbbfe30ad1aa4ba59c7491edfd23443a",
+                    "targetAttrName": null,
+                    "targetAttrId": "30050027031f4232bfcdb2aebd5bb097",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "aebecbf508074fa48278971f8510c6ae"
+                    ],
+                    "target_tag": [
+                        "7f9afe4c10fe4b7690e1c757a924fe25"
+                    ]
+                },
+                {
+                    "sourcename": "tag",
+                    "sourcelabel": "标签",
+                    "sourceObjectTypeId": "faf7cfdc547740b7adeec76b8f7f927a",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "d5177335e04549d6a1d5a3539299ce1a",
+                    "targetname": "metric",
+                    "targetlabel": "指标",
+                    "targetObjectTypeId": "a78cc2ce511a4d8e94e98cd1f7b744ce",
+                    "targetAttrName": null,
+                    "targetAttrId": "9e4d3b2b0d784bc9b94296f0875efb28",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "f384fbaa451842e5aaf2668fa3dc19ca"
+                    ],
+                    "target_tag": [
+                        "c1fd2efab7c24bf4a41b318f28e9ed18"
+                    ]
+                },
+                {
+                    "sourcename": "tag",
+                    "sourcelabel": "标签",
+                    "sourceObjectTypeId": "faf7cfdc547740b7adeec76b8f7f927a",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "d5177335e04549d6a1d5a3539299ce1a",
+                    "targetname": "Product",
+                    "targetlabel": "产品",
+                    "targetObjectTypeId": "2003",
+                    "targetAttrName": null,
+                    "targetAttrId": "6ce40d50d6f842789db5c65a04e755fd",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "649afe22cf06441b9fe70e24bbf8a4e4"
+                    ],
+                    "target_tag": [
+                        "e4de6da774734cfb9d4c3c0f20932247"
+                    ]
+                },
+                {
+                    "sourcename": "user",
+                    "sourcelabel": "用户",
+                    "sourceObjectTypeId": "dbbfe30ad1aa4ba59c7491edfd23443a",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "30050027031f4232bfcdb2aebd5bb097",
+                    "targetname": "Behavior",
+                    "targetlabel": "行为",
+                    "targetObjectTypeId": "0913dbe502694a9a841c742bd212559a",
+                    "targetAttrName": null,
+                    "targetAttrId": "f5b3a75b08cb4111acccd9d501995929",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "fe211a94bae44226827115ed22f4e5c8"
+                    ],
+                    "target_tag": [
+                        "5805c385253547388b307e7c5d855f32"
+                    ]
+                },
+                {
+                    "sourcename": "user",
+                    "sourcelabel": "用户",
+                    "sourceObjectTypeId": "dbbfe30ad1aa4ba59c7491edfd23443a",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "30050027031f4232bfcdb2aebd5bb097",
+                    "targetname": "metric",
+                    "targetlabel": "指标",
+                    "targetObjectTypeId": "a78cc2ce511a4d8e94e98cd1f7b744ce",
+                    "targetAttrName": null,
+                    "targetAttrId": "9e4d3b2b0d784bc9b94296f0875efb28",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "a62cdb91d30c4dd9b82a36c8410e5949"
+                    ],
+                    "target_tag": [
+                        "89c775327b2e43e890a57104143670d7"
+                    ]
+                },
+                {
+                    "sourcename": "user",
+                    "sourcelabel": "用户",
+                    "sourceObjectTypeId": "dbbfe30ad1aa4ba59c7491edfd23443a",
+                    "sourceAttrName": null,
+                    "sourceAttrId": "30050027031f4232bfcdb2aebd5bb097",
+                    "targetname": "tag",
+                    "targetlabel": "标签",
+                    "targetObjectTypeId": "faf7cfdc547740b7adeec76b8f7f927a",
+                    "targetAttrName": null,
+                    "targetAttrId": "d5177335e04549d6a1d5a3539299ce1a",
+                    "isUpsert": false,
+                    "linkId": null,
+                    "link_type": 1,
+                    "link_method": 1,
+                    "status": "1",
+                    "lastUpdate": "2025-10-14 17:39:07",
+                    "source_tag": [
+                        "e729f8943c6546f8b6b825e55bd6d43e"
+                    ],
+                    "target_tag": [
+                        "73fc54d13d324e0399df723be1b9dd29"
+                    ]
+                }
+            ],
+            "update": []
+        },
+        "action": {
+            "create": [],
+            "update": []
+        },
+        "logic": {
+            "create": [
+                {
+                    "ontology_id": "100",
+                    "ontology_name": "IDI 提升客户体验场景下本体",
+                    "used_objects": null,
+                    "function_name": "lowbalance",
+                    "file_name": "import_logic",
+                    "fun_params": {
+                        "balance": "double",
+                        "threshold": "Optional[float]",
+                        "fun_desc": "余额预警判断函数。\n\n    @function_label: 余额预警\n\n    根据账户余额判断是否进入低余额预警，并返回结构化结果。调用方可据此派生标签\n    `u_is_low_balance` (Y/N)。\n\n    规则（首版简化）：\n    - 使用调用入参 threshold；若未提供则使用 DEFAULT_THRESHOLD (=5.0)\n    - balance < threshold 视为低余额\n    - 阈值为 0 或负数将被拒绝（防错误配置）\n\n    Args:\n        balance: 当前账户余额（元）。\n        threshold: 可选自定义阈值（元），缺省使用 DEFAULT_THRESHOLD。\n\n    Returns:\n        dict: {is_low, balance, threshold, tag_value, reason}\n\n    Raises:\n        ValueError: 当 balance 为负或 threshold 非法时。",
+                        "function_label": "余额预警",
+                        "buildType": "function"
+                    }
+                }
+            ],
+            "update": []
+        }
+    },
+    "code": "200"
+}
