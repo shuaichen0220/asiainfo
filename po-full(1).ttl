@@ -1,0 +1,264 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix ex:       <http://asiainfo.com/example-owl#> .
+
+# ------ 流程命名空间 ------
+@prefix ex: <http://asiainfo.com/ex#> .
+@prefix ex: <http://asiainfo.com/ex#> .
+@prefix ex: <http://asiainfo.com/ex#> .
+@prefix ex:  <http://asiainfo.com/ex#> .
+@prefix ex:   <http://asiainfo.com/ex-map#> .
+
+# *********************************************
+# 0. 继承 template 基类（禁止改动）
+# *********************************************
+ex:Entity a owl:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "实体"@zh .
+ex:Object a owl:Class ; rdfs:subClassOf ex:Entity ; rdfs:label "本体对象"@zh .
+ex:Action a owl:Class ; rdfs:subClassOf prov:Activity ; rdfs:label "行动"@zh .
+ex:Function a owl:Class ; rdfs:subClassOf prov:Activity ; rdfs:label "决策/逻辑函数"@zh .
+
+ex:isPrimaryKey a owl:AnnotationProperty ; rdfs:label "是否主键"@zh .
+ex:isTitle a owl:AnnotationProperty ; rdfs:label "是否标题"@zh .
+ex:domainAttribute a owl:AnnotationProperty ; rdfs:label "域属性"@zh .
+ex:rangeAttribute a owl:AnnotationProperty ; rdfs:label "值域属性"@zh .
+
+ex:bindAction a owl:ObjectProperty ; rdfs:domain ex:Object ; rdfs:range ex:Action ; rdfs:label "本体对象关联行动"@zh .
+ex:bindFunction a owl:ObjectProperty ; rdfs:domain ex:Object ; rdfs:range ex:Function ; rdfs:label "本体对象关联函数"@zh .
+ex:custom_relation a owl:ObjectProperty ; rdfs:label "自定义对象与对象之间的关系"@zh .
+
+# *********************************************
+# 1. 实体定义
+# *********************************************
+ex:PurchaseOrder a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "采购订单"@zh .
+ex:PurchaseOrderLine a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "采购订单行"@zh .
+ex:ShipmentLine a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "采购订单发运行"@zh .
+ex:DistributionLine a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "采购订单分配行"@zh .
+ex:BusinessRole      a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "业务角色"@zh .
+ex:BusinessDocument  a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "业务单据"@zh .
+ex:BusinessEvent     a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "业务事件"@zh .
+ex:BusinessStatus    a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "业务状态"@zh .
+ex:SystemInterface   a owl:Class ; rdfs:subClassOf ex:Object ; rdfs:label "系统接口"@zh .
+
+# *********************************************
+# 2. 采购订单建立流程 – 全部接口字段
+# *********************************************
+# 2.1 Header
+ex:DO_FLAG               a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:PRI_KEY               a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string ; ex:isPrimaryKey true .
+ex:ORG_ID                a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:integer .
+ex:SOR_PO_DOC            a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:VENDOR_NUMBER         a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:INNER_FLAG            a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:CONTACT_NAME          a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:CONTACT_EMAIL         a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:DESCRIPTION           a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:AGENT_NUM             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:TAX_SUM               a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:decimal .
+ex:PO_AMOUNT             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:decimal .
+ex:FREE_FLAG             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:CURRENCY_CODE         a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:RATE_TYPE             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:RATE_DATE             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:date .
+ex:CURRENCY_CONVERSION_RATE a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:decimal .
+ex:EXP_TYPE              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:PUR_TYPE              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:CON_NUM_HQ            a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:CON_NUM               a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:INPUT_EXT             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+
+# 2.2 Line
+ex:PO_LINE_NUM           a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:integer .
+ex:LINE_TYPE             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:ITEM_NUMBER           a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:ITEM_DESCRIPTION      a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:QUANTITY              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:UNIT_PRICE            a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:UNIT_OF_MEASURE       a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:SITE_NUMBER           a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:DEMAND_DATE           a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:date .
+ex:ITEM_MADE_BY          a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:ITEM_MODLE_CODE       a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:ITEM_TYPE             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:PRD_NUM               a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:FA_LISTS              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:TAX_FLAG              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:TAX_CODE              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:LINE_TAX              a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:LINE_AMT_TAX          a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:LINE_DESC             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:INPUT_EXT_LINE        a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+
+# 2.3 Shipment
+ex:LINE_LOCATION_NUM     a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:integer .
+ex:ORGANIZATION_ID       a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:integer .
+ex:PROMISED_DATE         a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:date .
+ex:DEMAND_DATE_SHIP      a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:date .
+ex:EXPAND_ASSET_NUMBER   a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:string .
+ex:INPUT_EXT_SHIP        a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:string .
+
+# 2.4 Distribution
+ex:DISTRIBUTION_NUM      a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:integer .
+ex:DESTINATION_TYPE      a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:COST_CENTER_NUM       a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:PROJECT_NUMBER        a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:TASK_NUMBER           a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:EXPENDITURE_TYPE      a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:EXPENDITURE_ORG_ID    a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:integer .
+ex:EXPENDITURE_ITEM_DATE a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:date .
+ex:EXPENSE_ACCOUNT       a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:DIMENSION_CODE        a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:BUDGET_ID             a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:BUDGET_CONTRACT_NUM   a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:BUDGET_CONTRACT_LINE_NUM a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:INPUT_EXT_DIST        a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+
+# *********************************************
+# 3. 采购订单变更流程 – 全部接口字段
+# *********************************************
+ex:DO_FLAG            a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:ACTION             a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:AGENT_NUM          a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:DESCRIPTION        a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:TAX_SUM            a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:decimal .
+ex:PO_AMOUNT          a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:decimal .
+ex:FREE_FLAG          a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+ex:EXP_TYPE           a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+
+# 行级
+ex:ACTION_LINE        a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:PO_LINE_NUM     a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:integer .
+ex:ITEM_DESCRIPTION a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:QUANTITY        a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:UNIT_PRICE      a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:TAX_CODE        a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:string .
+ex:LINE_TAX        a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+ex:LINE_AMT_TAX    a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range xsd:decimal .
+
+# 发运行
+ex:PROMISED_DATE   a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:date .
+ex:DEMAND_DATE     a owl:DatatypeProperty ; rdfs:domain ex:ShipmentLine ; rdfs:range xsd:date .
+
+# 分配行
+ex:DIMENSION_CODE  a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:BUDGET_ID       a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:BUDGET_CONTRACT_NUM   a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+ex:BUDGET_CONTRACT_LINE_NUM a owl:DatatypeProperty ; rdfs:domain ex:DistributionLine ; rdfs:range xsd:string .
+
+# *********************************************
+# 4. 采购订单撤销流程 – 全部接口字段
+# *********************************************
+ex:ACTION   a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+# 其余字段与变更流程语义相同，直接复用 ex: 命名空间下的同名属性，无需重复声明。
+
+# *********************************************
+# 5. 采购订单关闭流程 – 全部接口字段
+# *********************************************
+ex:ACTION    a owl:DatatypeProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range xsd:string .
+# 其余字段与变更/撤销流程语义相同，直接复用已有属性。
+
+# *********************************************
+# 6. SCM ↔ ERP 字段级等价映射（核心）
+# *********************************************
+ex:PO_LINE_ID                    a owl:DatatypeProperty ; owl:equivalentProperty ex:PO_LINE_NUM .
+ex:EXPENDITURE_ORGANIZATION_ID   a owl:DatatypeProperty ; owl:equivalentProperty ex:EXPENDITURE_ORG_ID .
+ex:ORG_ID_ERP                    a owl:DatatypeProperty ; owl:equivalentProperty ex:ORG_ID .
+ex:PROJECT_ID                    a owl:DatatypeProperty ; owl:equivalentProperty ex:PROJECT_NUMBER .
+ex:AGENT_ID                      a owl:DatatypeProperty ; owl:equivalentProperty ex:AGENT_NUM .
+ex:TAX_AMOUNT                    a owl:DatatypeProperty ; owl:equivalentProperty ex:TAX_SUM .
+ex:UNIT_PRICE_ERP                a owl:DatatypeProperty ; owl:equivalentProperty ex:UNIT_PRICE .
+ex:EXPENDITURE_ITEM_DATE_ERP     a owl:DatatypeProperty ; owl:equivalentProperty ex:EXPENDITURE_ITEM_DATE .
+
+# *********************************************
+# 7. 个体定义
+# *********************************************
+ex:Role_Purchaser   a ex:BusinessRole ; rdfs:label "采购员"@zh .
+ex:Role_Requester   a ex:BusinessRole ; rdfs:label "需求部门申请人"@zh .
+ex:Role_Warehouse   a ex:BusinessRole ; rdfs:label "仓储部门"@zh .
+ex:Doc_PurchaseRequisition  a ex:BusinessDocument ; dcterms:identifier "ACC.SC.01.01-1" ; rdfs:label "采购申请单"@zh .
+ex:Doc_Contract             a ex:BusinessDocument ; dcterms:identifier "ACC.SC.01.01-2" ; rdfs:label "采购合同"@zh .
+ex:Doc_GRN                  a ex:BusinessDocument ; dcterms:identifier "ACC.SC.01.03-1" ; rdfs:label "入库单"@zh .
+ex:Doc_ReturnNotice         a ex:BusinessDocument ; dcterms:identifier "ACC.SC.01.03-2" ; rdfs:label "退货出库通知单"@zh .
+ex:Event_CreateOrder      a ex:BusinessEvent ; rdfs:label "创建订单事件"@zh .
+ex:EventangeOrder      a ex:BusinessEvent ; rdfs:label "变更订单事件"@zh .
+ex:Event_CancelOrder      a ex:BusinessEvent ; rdfs:label "撤销订单事件"@zh .
+ex:Event_CloseOrder       a ex:BusinessEvent ; rdfs:label "关闭订单事件"@zh .
+ex:Event_ApproveOrder     a ex:BusinessEvent ; rdfs:label "审批订单事件"@zh .
+ex:Event_SyncERP          a ex:BusinessEvent ; rdfs:label "同步ERP事件"@zh .
+ex:Event_ReturnToVendor   a ex:BusinessEvent ; rdfs:label "退货至供应商事件"@zh .
+ex:Status_New       a ex:BusinessStatus ; rdfs:label "新建"@zh .
+ex:Status_Approved  a ex:BusinessStatus ; rdfs:label "已审批"@zh .
+ex:Status_Received  a ex:BusinessStatus ; rdfs:label "已接收"@zh .
+ex:Status_InStock   a ex:BusinessStatus ; rdfs:label "已入库"@zh .
+ex:Status_OutStock  a ex:BusinessStatus ; rdfs:label "已出库"@zh .
+ex:Status_Cancelled a ex:BusinessStatus ; rdfs:label "已撤销"@zh .
+ex:Status_Closed    a ex:BusinessStatus ; rdfs:label "已关闭"@zh .
+ex:IF_00001 a ex:SystemInterface ; dcterms:identifier "OSB_ERP_PO_HQ_00001" ; rdfs:label "采购订单创建接口"@zh .
+ex:IF_00012 a ex:SystemInterface ; dcterms:identifier "OSB_ERP_PO_HQ_00012" ; rdfs:label "采购订单修改/取消/关闭接口"@zh .
+
+
+# *********************************************
+# 8. 对象属性（关系）
+# *********************************************
+ex:hasLine          a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range ex:PurchaseOrderLine ; rdfs:label "拥有订单行"@zh .
+ex:hasShipment      a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range ex:ShipmentLine ; rdfs:label "拥有发运行"@zh .
+ex:hasDistribution  a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrderLine ; rdfs:range ex:DistributionLine ; rdfs:label "拥有分配行"@zh .
+ex:lineOf          owl:inverseOf ex:hasLine .
+ex:shipmentOf      owl:inverseOf ex:hasShipment .
+ex:distributionOf  owl:inverseOf ex:hasDistribution .
+ex:hasRole           a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range ex:BusinessRole ; rdfs:label "拥有角色"@zh .
+ex:hasDocument       a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range ex:BusinessDocument ; rdfs:label "拥有单据"@zh .
+ex:hasEvent          a owl:ObjectProperty ; rdfs:domain ex:Object ; rdfs:range ex:BusinessEvent ; rdfs:label "拥有事件"@zh .
+ex:hasStatus         a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range ex:BusinessStatus ; rdfs:label "拥有状态"@zh .
+ex:triggers          a owl:ObjectProperty ; rdfs:domain ex:BusinessEvent ; rdfs:range ex:BusinessEvent ; rdfs:label "触发事件"@zh .
+ex:generatedBy       a owl:ObjectProperty ; rdfs:domain ex:BusinessDocument ; rdfs:range ex:BusinessEvent ; rdfs:label "由事件生成"@zh .
+ex:validatedBy       a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range ex:Function ; rdfs:label "由函数校验"@zh .
+ex:synchronizedBy    a owl:ObjectProperty ; rdfs:domain ex:PurchaseOrder ; rdfs:range ex:SystemInterface ; rdfs:label "由接口同步"@zh .
+
+# *********************************************
+# 9. 流程溯源 Annotation
+# *********************************************
+ex:PurchaseOrder  dcterms:source "ACC.SC.01.01" ; dcterms:description "采购订单建立流程主实体"@zh .
+ex:ACTION         dcterms:source "ACC.SC.01.02" .
+ex:ACTION         dcterms:source "ACC.SC.01.03" .
+ex:ACTION          dcterms:source "ACC.SC.01.04" .
+ex:BusinessEvent  rdfs:subClassOf prov:Activity .
+ex:BusinessDocument  rdfs:subClassOf prov:Entity .
+ex:PurchaseOrder  rdfs:subClassOf prov:Entity .
+ex:Event_CreateOrder
+    prov:used ex:Doc_PurchaseRequisition ;
+    prov:wasAssociatedWith ex:Role_Purchaser ;
+    prov:generated ex:PurchaseOrder .
+ex:Event_SyncERP
+    prov:used ex:PurchaseOrder ;
+    prov:wasAssociatedWith ex:IF_00001 .
+
+# *********************************************
+# 10. 业务规则
+# *********************************************
+ex:FREE_FLAG
+    rdfs:comment "订单关闭时，若已接收数量 > 0，则 FREE_FLAG 不可更新" .
+ex:PO_AMOUNT
+    rdfs:comment "变更后的订单含税金额必须 ≤ 合同可用含税金额" .
+ex:ACTION
+    rdfs:comment "撤销订单时，若已入库且已出库，必须先触发退库事件" .
+ex:allowedAction  a owl:DatatypeProperty ; rdfs:domain ex:SystemInterface ; rdfs:range xsd:string .
+ex:IF_00012
+    rdfs:comment "接口 00012 仅支持 ACTION ∈ {U,C,S,O}" ;
+    ex:allowedAction "U,C,S,O" .
+ex:SinglePO  a  ex:PurchaseOrder ;
+    dcterms:identifier "EXAMPLE-PO-0001" ;
+    ex:hasStatus  ex:Status_New ;
+    ex:synchronizedBy  ex:IF_00001 ;
+    ex:hasRole  ex:Role_Purchaser .
+ex:Event_CreateOrder
+    prov:used            ex:Doc_PurchaseRequisition ;
+    prov:wasAssociatedWith ex:Role_Purchaser ;
+    prov:generated       ex:SinglePO .
+ex:Event_SyncERP
+    prov:used            ex:SinglePO ;
+    prov:wasAssociatedWith ex:IF_00001 .
+
